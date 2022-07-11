@@ -1,0 +1,178 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: italic;
+}
+body{
+	background-repeat: no-repeat;
+	 max-height: 100vh;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .05)), url(images/city.jpg);
+	
+}
+.main{
+	max-width: 800px;
+	margin: auto;
+	background: transparent;
+}
+.form{
+	min-height: 400px;
+	border-radius: 7px;
+	margin: 15px 35px;
+	background: rgba(0, 0, 0, .85);
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+}
+.form__label{
+	cursor: pointer;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.form__item{
+	color: white;
+
+}
+.form__item-input{
+	position: relative;
+	min-height: 120px;
+}
+
+.form__input{
+	padding: 0px 5px 0px 20px;
+	font-size: 18px;
+	color: rgba(255, 255, 255, .9);
+	line-height: 45px;
+	background-color: rgba(0, 0, 0, .7);	
+	height: 45px;
+	width: 100%;
+	transition: 0.3s ease all;
+	border: 3px solid rgba(55, 00, 0, .0);
+
+}/*
+.form__input:hover{
+	border: 3.5px solid rgba(255, 160, 30, .4);
+}*/
+.form__input:focus{
+	outline: none;
+	border: 3.5px solid rgba(255, 255, 54, 1);
+}
+.form__input::placeholder{
+	color: white;
+}
+.form__input:focus::placeholder{
+	color: transparent;
+}
+#checkbox, #error-msj, #button{
+	grid-column: span 2;
+}
+
+.form__item-succes-msj{
+	text-align: center;
+	margin-bottom: 5px;
+	color: transparent;
+	}
+.form__item-succes-msj-active{
+	text-align: center;
+	color: white;
+
+}
+.form__item-button{
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	border: 3px solid rgba(0, 0, 0, .3);
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px;
+	width: 20%;
+	color: white;
+	background: rgba(0, 0, 0, .4);
+	font-size: 20px;
+	transition: 0.2s;
+}
+
+.form__item-button:hover{
+    border-color: rgba(255, 255, 54, 1); 
+	background: rgba(0, 0, 0, 1.0);
+	}
+
+.form__item-checkbox{
+
+	display: flex;
+	padding: 10px;
+}
+
+.checkbox{
+	margin: 0px 10px 0 0;
+}
+
+.form__item-msj{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.form__item-error-msj{
+	display: none;
+}
+.form__item-error-msj-active {
+	display: flex;
+	margin: auto;
+	width: 80%;
+	background: rgba(255, 0, 0, 1.0);
+	color: white;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	min-height: 49px;
+	box-shadow: 30px 0 30px black;
+	border: 2px solid rgba(0, 0, 0, .4);
+	border-radius: 5px;
+
+}
+.form__item-validation{
+	color: transparent;
+	position: absolute;
+	bottom: 60px;
+	right: 10px;
+}
+.form__item-msj{
+	color: transparent;
+}
+
+.form__item-wrong .form__input{
+	border: 3px solid rgba(255, 0, 0, 1.0);
+}
+
+ .form__item-wrong .form__item-msj, .form__item-wrong .form__label,
+  .form__item-wrong .form__item-validation{
+	color: rgba(255, 0, 0, 1.0);
+	font-weight: bold;
+}
+.form__item-ok .form__item-validation{
+	color: rgba(0, 255, 0, 1.0);
+
+}
+@media screen and (max-width: 790px){
+	.form{
+		grid-template-columns: 1fr;
+		margin: 0;
+
+	}
+	#checkbox, #error-msj, #button{
+	grid-column: 1;
+}
+	.form__item-button{
+
+		width: 40%;
+		min-width: 120px
+		;
+	}
+
+}
+
+
